@@ -14,7 +14,12 @@ Bold: 700
 -LINE HEIGHT
 Default: 1
 Small: 1.05
+Medium: 1.2
 Paragraugh Default: 1.6 
+
+-Letter Spacing
+-0.5px
+0.75px
 
 -FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
@@ -58,16 +63,55 @@ body {
 }
 
 /************************/
-/* GENERAL COPONENTS */
+/* GENERAL REUSEABLE COPONENTS */
 /************************/
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.heading-primary,
+.heading-secondary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
 
 .heading-primary {
   font-size: 5.3rem;
-  font-weight: 700;
   line-height: 1.05;
-  letter-spacing: -0.5px;
   margin-bottom: 3.2rem;
-  color: #333;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
 }
 
 .btn:link,
@@ -226,22 +270,18 @@ body {
 }
 
 /************************/
-/* HERO SECTION */
+/* HOW IT WORKS SECTION */
 /************************/
 .section-how {
-  padding: 9.6px o;
-  background-color: orangered;
+  padding: 9.6rem 0;
 }
 
-.section-how div:nth-child(1) {
-  background-color: aqua;
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
 }
-.section-how div:nth-child(2) {
-  background-color: blue;
-}
-.section-how div:nth-child(3) {
-  background-color: violet;
-}
-.section-how div:nth-child(4) {
-  background-color: yellow;
+
+.step-img {
+  width: 50%;
 }
